@@ -4,9 +4,9 @@ firebase.auth().onAuthStateChanged((User) => {
     }else{
         userService.findByUid(User.uid).then(user=>{
             if(user === undefined){
-                var btn_jogar = document.getElementById("btnJogar");
-                btn_jogar.disabled = true;  
+                document.getElementById("btnJogar").style.display = "none";
                 alert("Seu perfil precisa ser atualizado e ativado!Acesse o menu perfil.");
+                window.location.href = "./atualizacao.html";
             }else{
                 document.getElementById("nameUser").innerHTML = user.nickname;
                 var avatar = user.avatar;
@@ -25,18 +25,6 @@ function jogar() {
 
 function voltar() {
     window.location.href = "./confirmacao.html";
-}
-
-function ranking_geral() {
-    window.location.href = "../ranking/geral/geralranking.html";
-}
-
-function ranking_nivel() {
-    window.location.href = "../ranking/level/levelranking.html";
-}
-
-function extrato() {
-    window.location.href = "../extrato/extrato.html";
 }
 
 function logout() {
