@@ -2,8 +2,7 @@ firebase.auth().onAuthStateChanged((User) => {
     if (!User) {
         window.location.href = "../login/login.html";
     }else{
-
-        document.getElementById("play-form").addEventListener("submit", function(event) {
+        document.getElementById("form-profile").addEventListener("submit", function(event) {
         event.preventDefault();
             const name = document.getElementById("nome");
             const select = document.getElementById("profile");
