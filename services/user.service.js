@@ -1,4 +1,4 @@
-const userService = {
+const usersService = {
     findByUid: uid => {
         return firebase.firestore()
             .collection("users")
@@ -8,10 +8,10 @@ const userService = {
                 return doc.data();
             });
     },
-    save: (user_UID, user) => {
+    save: (uid, users) => {
         return firebase.firestore()
             .collection("users")
-            .doc(user_UID)
-            .set(user);
+            .doc(uid)
+            .set(users);
     }
 };
