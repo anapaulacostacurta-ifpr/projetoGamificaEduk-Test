@@ -36,7 +36,7 @@ function logout() {
 }
 
 function voltar(){
-    window.location.href = "confirmacao.html";
+    window.location.href = "home.html";
 }
 
 

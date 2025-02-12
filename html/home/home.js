@@ -23,10 +23,6 @@ function jogar() {
     window.location.href = "../play/play.html";
 }
 
-function voltar() {
-    window.location.href = "./confirmacao.html";
-}
-
 function logout() {
     firebase.auth().signOut().then(() => {
         window.location.href = "../login/login.html";
