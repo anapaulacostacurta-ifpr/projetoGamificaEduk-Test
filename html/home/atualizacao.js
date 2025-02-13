@@ -21,7 +21,7 @@ firebase.auth().onAuthStateChanged((User) => {
                 }
             }
             var users = {name: name, profile, score:0, status:false};
-            userService.save(User.uid,{users}).then(alert("Aguarde seu perfil ser ativado pelo administrador!"));
+            usersService.save(User.uid,{users}).then(alert("Aguarde seu perfil ser ativado pelo administrador!"));
             logout();
         });
     }
