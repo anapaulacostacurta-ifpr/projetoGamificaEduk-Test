@@ -4,7 +4,7 @@ firebase.auth().onAuthStateChanged((User) => {
     }else{
         document.getElementById("form-profile").addEventListener("submit", function(event) {
         event.preventDefault();
-            const name = document.getElementById("nome");
+            const name = document.getElementById("nome").value;
             const select = document.getElementById("profile");
             const profileUser = select.options[select.selectedIndex].value;
             
