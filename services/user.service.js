@@ -12,6 +12,6 @@ const usersService = {
         return firebase.firestore()
             .collection("users")
             .doc(uid)
-            .add(users);
+            .set(users);
     }
 };
