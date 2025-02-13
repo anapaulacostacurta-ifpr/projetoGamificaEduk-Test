@@ -8,8 +8,8 @@ const usersService = {
                 return doc.data();
             });
     },
-    save: (uid, user) => {
-        return firebase.firestore()
+    save:  async(uid, user) => {
+        return await firebase.firestore()
             .collection("users")
             .doc(uid)
             .set(user);
